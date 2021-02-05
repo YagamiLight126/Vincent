@@ -1,6 +1,6 @@
 {
   "name": "c.c.tsx",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "code template",
   "main": "index.tsx",
   "repository": {
@@ -9,18 +9,15 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "webpack --config webpack.prod.js",
-    "start": "webpack serve --config webpack.dev.js --progress",
+    "build": "webpack --config scripts/webpack.prod.js",
+    "start": "webpack serve --config scripts/webpack.dev.js --progress",
     "lint": "npm run lint:script  && npm run lint:style",
     "lint:script": "eslint . --ext '.js,.jsx,.ts,.tsx'",
     "lint:style": "prettier --write src/**"
   },
   "author": "FuZhiCheng",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/YagamiLight126/C.C.tsx/issues"
-  },
-  "homepage": "https://github.com/YagamiLight126/C.C.tsx#readme",
+  "homepage": "https://github.com/YagamiLight126/C.C..git",
   "dependencies": {
     "antd": "^4.12.2",
     "isomorphic-fetch": "^3.0.0",
@@ -90,5 +87,10 @@
   "lint-staged": {
     "*.{js,ts,tsx,jsx}": "eslint --fix",
     "*.{js,css,md,ts,tsx}": "prettier --write"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
