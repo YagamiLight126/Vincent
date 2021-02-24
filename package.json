@@ -1,6 +1,6 @@
 {
   "name": "c.c",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "code template",
   "main": "index.tsx",
   "repository": {
@@ -26,11 +26,11 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.13",
+    "@babel/core": "^7.13.1",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@babel/plugin-proposal-object-rest-spread": "^7.12.13",
-    "@babel/plugin-transform-runtime": "^7.13.4",
-    "@babel/preset-env": "^7.12.13",
+    "@babel/plugin-transform-runtime": "^7.13.6",
+    "@babel/preset-env": "^7.13.5",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.12.13",
     "@commitlint/cli": "^12.0.0",
@@ -68,10 +68,10 @@
     "prettier": "^2.2.1",
     "react-refresh": "^0.9.0",
     "style-loader": "^2.0.0",
-    "ts-jest": "^26.5.0",
+    "ts-jest": "^26.5.2",
     "ts-node": "^9.1.1",
-    "typescript": "^4.1.3",
-    "webpack": "^5.20.2",
+    "typescript": "^4.2.2",
+    "webpack": "^5.24.1",
     "webpack-bundle-analyzer": "^4.4.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2",
