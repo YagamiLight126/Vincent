@@ -10,5 +10,5 @@ ReactDOM.render(
   <ConfigProvider locale={zh_CN}>
     <Router />
   </ConfigProvider>,
-  document.getElementById("c.c")
+  document.getElementById("vincent")
 );

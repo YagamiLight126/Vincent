@@ -1,13 +1,14 @@
 {
-  "name": "c.c",
-  "version": "1.4.0",
-  "description": "code template",
+  "name": "vincent",
+  "version": "1.0.0",
+  "description": "Typescript-React-Starter",
   "main": "index.tsx",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YagamiLight126/C.C..git"
+    "url": "git+https://github.com/YagamiLight126/Vincent.git"
   },
   "scripts": {
+    "postinstall": "husky install",
     "test": "jest",
     "build": "webpack --config scripts/webpack.prod.js",
     "start": "webpack serve --config scripts/webpack.dev.js --progress",
@@ -60,7 +61,7 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "html-webpack-plugin": "^5.0.0",
-    "husky": "^5.1.1",
+    "husky": "^6.0.0",
     "jest": "^26.6.3",
     "less": "^4.1.1",
     "less-loader": "^8.0.0",

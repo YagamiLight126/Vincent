@@ -1,6 +1,6 @@
 ## 说明
 
-React + TS 的 code template
+React + TS 的 starter
 
 ## 功能
 
