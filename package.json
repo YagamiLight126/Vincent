@@ -8,7 +8,6 @@
     "url": "git+https://github.com/YagamiLight126/Vincent.git"
   },
   "scripts": {
-    "postinstall": "husky install",
     "test": "jest",
     "build": "webpack --config scripts/webpack.prod.js",
     "start": "webpack serve --config scripts/webpack.dev.js --progress",
@@ -19,12 +18,12 @@
   "author": "FuZhiCheng",
   "license": "ISC",
   "dependencies": {
-    "antd": "^4.12.2",
+    "antd": "^4.22.2",
     "isomorphic-fetch": "^3.0.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.1",
@@ -34,8 +33,6 @@
     "@babel/preset-env": "^7.13.5",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.12.13",
-    "@commitlint/cli": "^12.0.0",
-    "@commitlint/config-conventional": "^12.0.0",
     "@emotion/babel-plugin": "^11.0.0",
     "@emotion/eslint-plugin": "^11.0.0",
     "@emotion/react": "^11.0.0",
@@ -44,15 +41,15 @@
     "@types/isomorphic-fetch": "0.0.35",
     "@types/jest": "^26.0.20",
     "@types/qs": "^6.9.5",
-    "@types/react": "^17.0.1",
-    "@types/react-dom": "^17.0.0",
-    "@types/react-router-dom": "^5.1.7",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
     "antd-dayjs-webpack-plugin": "^1.0.6",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
-    "babel-plugin-import": "^1.13.3",
+    "babel-plugin-import": "^1.13.5",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
     "eslint": "^7.19.0",
@@ -61,7 +58,6 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "html-webpack-plugin": "^5.0.0",
-    "husky": "^6.0.0",
     "jest": "^26.6.3",
     "less": "^4.1.1",
     "less-loader": "^8.0.0",
@@ -71,7 +67,7 @@
     "style-loader": "^2.0.0",
     "ts-jest": "^26.5.2",
     "ts-node": "^9.1.1",
-    "typescript": "^4.2.2",
+    "typescript": "^4.7.4",
     "webpack": "^5.24.1",
     "webpack-bundle-analyzer": "^4.4.0",
     "webpack-cli": "^4.5.0",
@@ -83,10 +79,5 @@
     "*.{js,css,md,ts,tsx}": "prettier --write",
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
   }
 }
