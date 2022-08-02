@@ -1,8 +1,8 @@
 const path = require("path");
 const { merge } = require("webpack-merge");
 const AntdDayjsWebpackPlugin = require("antd-dayjs-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-  .BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 const common = require("./webpack.common.js");
 
@@ -15,5 +15,8 @@ module.exports = merge(common, {
     clean: true,
   },
   devtool: false,
-  plugins: [new AntdDayjsWebpackPlugin(), new BundleAnalyzerPlugin()],
+  plugins: [
+    new AntdDayjsWebpackPlugin(),
+    // new BundleAnalyzerPlugin()
+  ],
 });
