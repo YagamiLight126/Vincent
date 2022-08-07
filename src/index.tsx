@@ -1,4 +1,5 @@
 import React from "react";
+import { RecoilRoot } from "recoil";
 import { ConfigProvider } from "antd";
 import { createRoot } from "react-dom/client";
 import zh_CN from "antd/lib/locale-provider/zh_CN";
@@ -10,7 +11,9 @@ const container = document.getElementById("vincent");
 const root = createRoot(container!);
 
 root.render(
-  <ConfigProvider locale={zh_CN}>
-    <Router />
-  </ConfigProvider>
+  <RecoilRoot>
+    <ConfigProvider locale={zh_CN}>
+      <Router />
+    </ConfigProvider>
+  </RecoilRoot>
 );

@@ -7,7 +7,7 @@ module.exports = {
     jest: true,
   },
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "@emotion"],
+  plugins: ["@typescript-eslint", "@emotion", "react-hooks"],
   extends: [
     "eslint:recommended",
     "plugin:react-hooks/recommended",
@@ -29,5 +29,12 @@ module.exports = {
     "@typescript-eslint/no-require-imports": 0,
     "no-unused-expressions": [0, { allowShortCircuit: true }],
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        additionalHooks: "(useRecoilCallback|useRecoilTransaction_UNSTABLE)",
+      },
+    ],
   },
 };

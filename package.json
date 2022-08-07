@@ -1,7 +1,6 @@
 {
   "name": "vincent",
   "version": "2.0.0",
-  "description": "Typescript-React-Starter",
   "main": "index.tsx",
   "repository": {
     "type": "git",
@@ -23,7 +22,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "recoil": "^0.7.4"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
