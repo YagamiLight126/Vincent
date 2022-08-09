@@ -2,9 +2,9 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: path.resolve("./", "src/index.tsx"),
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve("./", "dist"),
     publicPath: "/",
   },
 
@@ -14,6 +14,7 @@ module.exports = {
 
   module: {
     rules: [
+      { test: /\.png/, type: "asset/resource" },
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,

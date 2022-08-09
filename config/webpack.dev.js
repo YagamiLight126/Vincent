@@ -10,7 +10,6 @@ module.exports = merge(common, {
   devtool: "inline-source-map",
   output: {
     filename: "[name].[fullhash:8].js",
-    
   },
 
   module: {
@@ -32,7 +31,7 @@ module.exports = merge(common, {
 
   devServer: {
     static: {
-      directory: path.join(__dirname, "dist"),
+      directory: path.join("./", "dist"),
     },
     port: 1231, // 指定端口号以侦听以下请求：
     hot: true, // 启用 webpack 的 Hot Module Replacement 功能：

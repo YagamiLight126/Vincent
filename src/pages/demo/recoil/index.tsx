@@ -1,8 +1,8 @@
-import React from "react";
-import { Alert } from "antd";
-import styled from "@emotion/styled";
+/** @jsx jsx */
+import * as React from "react";
+import { jsx } from "@emotion/react";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { textState, charCountState } from "./helloData";
+import { textState, charCountState } from "./data";
 
 function TextInput() {
   const [text, setText] = useRecoilState(textState);
@@ -23,14 +23,14 @@ function TextInput() {
 function CharacterCount() {
   const count = useRecoilValue(charCountState);
 
-  return <>Character Count: {count}</>;
+  return <React.Fragment>Character Count: {count}</React.Fragment>;
 }
 
 export default function Hello() {
   return (
-    <>
+    <React.Fragment>
       <TextInput />
       <CharacterCount />
-    </>
+    </React.Fragment>
   );
 }
