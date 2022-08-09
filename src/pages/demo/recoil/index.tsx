@@ -26,7 +26,7 @@ function CharacterCount() {
   return <React.Fragment>Character Count: {count}</React.Fragment>;
 }
 
-export default function Hello() {
+export default function Recoil() {
   return (
     <React.Fragment>
       <TextInput />

@@ -1,6 +1,6 @@
 import { message as antdMessage, notification } from "antd";
 
-import { ResponseData } from "../utils/api-request";
+import { ResponseData } from "./api-request";
 antdMessage.config({ maxCount: 1 });
 
 // 处理请求错误

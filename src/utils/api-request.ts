@@ -1,5 +1,6 @@
 import { stringify } from "qs";
 import fetch from "isomorphic-fetch";
+import { handleRequestError } from "./interceptor";
 
 type allowedMethod = "GET" | "PUT" | "DELETE" | "POST";
 type DefaultResult =
@@ -39,7 +40,7 @@ interface CProps {
   interceptor?: Interceptor;
 }
 
-export default class APIRequest {
+class BaseAPIRequest {
   public domain: string;
   public pathPrefix: string;
   public headers: HeadersInit;
@@ -228,5 +229,30 @@ export default class APIRequest {
         return str;
       })
       .join("/");
+  }
+}
+
+const pathPrefix = "/api";
+
+export default class ApiRequest extends BaseAPIRequest {
+  public constructor() {
+    super({
+      pathPrefix,
+      fetchOpts: {
+        credentials: "include",
+      },
+      interceptor: {
+        response(data) {
+          if (data.status === "success") {
+            handleRequestError(data);
+          }
+
+          return {
+            success: data.status === "success",
+            ...data,
+          };
+        },
+      },
+    });
   }
 }

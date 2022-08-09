@@ -2,7 +2,9 @@
 import React from "react";
 import { jsx } from "@emotion/react";
 import { Card, Row, Col } from "antd";
+
 import Recoil from "./recoil";
+import Lelouch from "./img";
 
 export default function Demo() {
   return (
@@ -13,12 +15,12 @@ export default function Demo() {
             <Recoil />
           </Card>
         </Col>
-        {/* <Col span={8}>
-          <Card title="Card title" bordered={false}>
-            Card content
+        <Col span={8}>
+          <Card title="Image" bordered={false}>
+            <Lelouch />
           </Card>
         </Col>
-        <Col span={8}>
+        {/* <Col span={8}>
           <Card title="Card title" bordered={false}>
             Card content
           </Card>

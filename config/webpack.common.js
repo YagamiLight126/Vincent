@@ -14,7 +14,7 @@ module.exports = {
 
   module: {
     rules: [
-      { test: /\.png/, type: "asset/resource" },
+      { test: /\.(png|jpe?g)$/, type: "asset/resource" },
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,

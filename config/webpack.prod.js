@@ -10,7 +10,7 @@ module.exports = merge(common, {
   mode: "production", // 会将 DefinePlugin 中 process.env.NODE_ENV 的值设置为 production。启用 FlagDependencyUsagePlugin, FlagIncludedChunksPlugin, ModuleConcatenationPlugin, NoEmitOnErrorsPlugin, OccurrenceOrderPlugin, SideEffectsFlagPlugin 和 TerserPlugin。
   target: "web",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve("./", "dist"),
     filename: "[name].[chunkhash:8].js",
     clean: true,
   },
