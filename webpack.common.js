@@ -1,11 +1,13 @@
 const path = require("path");
+const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: path.resolve("./", "src/index.tsx"),
+  entry: "./src/index.tsx",
+  target: "web",
+
   output: {
-    path: path.resolve("./", "dist"),
-    publicPath: "/",
+    path: path.resolve(__dirname, "dist"),
   },
 
   resolve: {
@@ -14,7 +16,11 @@ module.exports = {
 
   module: {
     rules: [
-      { test: /\.(png|jpe?g)$/, type: "asset/resource" },
+      {
+        test: /\.(png|jpe?g)$/,
+        type: "asset/resource",
+        generator: { filename: "assets/[hash][ext][query]" },
+      },
       {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
@@ -37,27 +43,35 @@ module.exports = {
   },
 
   plugins: [
-    new HtmlWebpackPlugin({ template: path.resolve("./src/index.html") }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./src/index.html"),
+    }),
   ],
 
   optimization: {
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: { format: { comments: false } },
+        extractComments: false,
+      }),
+    ],
     runtimeChunk: {
-      name: "runtime~main",
+      name: "runtime",
     },
     splitChunks: {
       cacheGroups: {
         commons: {
-          name: "common~main",
+          name: "common",
           chunks: "initial",
           minSize: 30,
           enforce: true,
           priority: -20,
         },
-        vendors: {
+        vendor: {
           test: /[\\/]node_modules[\\/]/,
-          name: "vendors~main",
-          chunks: "initial",
+          name: "vendors",
           priority: -10,
+          chunks: "all",
         },
       },
     },

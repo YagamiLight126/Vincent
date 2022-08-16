@@ -4,10 +4,9 @@
     "module": "es2015",                       /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
     "lib": ["es2015","dom"],                  /* Specify library files to be included in the compilation. */
     "allowJs": true,                          /* Allow javascript files to be compiled. */
-    "jsx": "react",                       /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+    "jsx": "react",                           /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
     "sourceMap": true,                        /* Generates corresponding '.map' file. */
     "outDir": "./dist/",                      /* Redirect output structure to the directory. */
-
     "strict": true,                           /* Enable all strict type-checking options. */
     "noImplicitAny": true,                    /* Raise error on expressions and declarations with an implied 'any' type. */
 

@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "webpack --config config/webpack.prod.js",
-    "start": "webpack serve --config config/webpack.dev.js --progress",
+    "build": "webpack --config webpack.prod.js --progress",
+    "start": "webpack serve --config webpack.dev.js --progress",
     "lint": "npm run lint:script && npm run lint:style",
     "lint:script": "eslint . --ext '.js,.jsx,.ts,.tsx'",
     "lint:style": "prettier --write src/**"

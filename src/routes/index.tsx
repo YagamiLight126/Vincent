@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
-import Demo from "../pages/demo";
-import Layout from "./Layout";
+import Demo from "../views/demo";
+import Layout from "../views/layout";
 
 export default function ToDoRouter() {
   return (
