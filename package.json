@@ -8,22 +8,26 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "webpack --config webpack.prod.js --progress",
-    "start": "webpack serve --config webpack.dev.js --progress",
+    "build": "webpack --config ./config/webpack.prod.js --progress",
+    "start": "webpack serve --config ./config/webpack.dev.js --progress",
     "lint": "npm run lint:script && npm run lint:style",
     "lint:script": "eslint . --ext '.js,.jsx,.ts,.tsx'",
-    "lint:style": "prettier --write src/**"
+    "lint:style": "prettier --write src/**",
+    "postinstall": "node ./scripts/postinstall.js"
   },
   "author": "FuZhiCheng",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "@tinymce/tinymce-react": "^4.2.0",
     "antd": "^4.22.4",
+    "fs-extra": "^10.1.0",
     "isomorphic-fetch": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
-    "recoil": "^0.7.4"
+    "recoil": "^0.7.4",
+    "tinymce": "^6.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",

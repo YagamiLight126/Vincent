@@ -5,6 +5,7 @@ import { Card, Row, Col } from "antd";
 
 import Recoil from "./recoil";
 import Lelouch from "./img";
+import Editor from "./editor";
 
 export default function Demo() {
   return (
@@ -20,11 +21,11 @@ export default function Demo() {
             <Lelouch />
           </Card>
         </Col>
-        {/* <Col span={8}>
-          <Card title="Card title" bordered={false}>
-            Card content
+        <Col span={24}>
+          <Card title="Image" bordered={false}>
+            <Editor />
           </Card>
-        </Col> */}
+        </Col>
       </Row>
     </React.Fragment>
   );

@@ -14,5 +14,8 @@ module.exports = merge(common, {
     clean: true,
   },
   devtool: false,
-  plugins: [new AntdDayjsWebpackPlugin(), new BundleAnalyzerPlugin()],
+  plugins: [
+    new AntdDayjsWebpackPlugin(),
+    // new BundleAnalyzerPlugin()
+  ],
 });

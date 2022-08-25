@@ -1,4 +1,6 @@
 const { merge } = require("webpack-merge");
+const webpack = require("webpack");
+const path = require("path");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 const common = require("./webpack.common.js");
@@ -27,10 +29,18 @@ module.exports = merge(common, {
     ],
   },
 
-  plugins: [new ReactRefreshWebpackPlugin()].filter(Boolean),
+  plugins: [
+    new ReactRefreshWebpackPlugin(),
+    new webpack.DefinePlugin({
+      TINYMCE_PUBLIC_PATH: JSON.stringify("/public"),
+    }),
+  ].filter(Boolean),
 
   devServer: {
-    static: "./dist",
+    static: {
+      directory: path.resolve("./", "public"),
+      publicPath: "/public",
+    },
     open: true,
     port: 1231, // 指定端口号以侦听以下请求：
     hot: true, // 启用 webpack 的 Hot Module Replacement 功能：

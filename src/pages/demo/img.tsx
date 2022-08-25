@@ -2,7 +2,7 @@
 import React from "react";
 import { jsx } from "@emotion/react";
 
-import Lelouch from "../../../../assets/lelouch.jpeg";
+import Lelouch from "../../../assets/lelouch.jpeg";
 
 export default function ImageDemo() {
   return (

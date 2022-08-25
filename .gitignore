@@ -3,3 +3,6 @@
 .DS_Store
 /coverage
 .vscode
+
+# ... other rules omitted for brevity ...
+/public/tinymce/

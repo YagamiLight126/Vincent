@@ -4,21 +4,26 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: path.resolve("./", "src/index.tsx"),
   target: "web",
 
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve("./", "dist"),
   },
 
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"],
+    extensions: [".ts", ".tsx", ".js", ".json", ".jsx"],
   },
 
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g)$/,
+        test: /\.(png|jpe?g|svg)$/,
+        type: "asset/resource",
+        generator: { filename: "assets/[hash][ext][query]" },
+      },
+      {
+        test: /\.(woff|eot|ttf|woff2)$/,
         type: "asset/resource",
         generator: { filename: "assets/[hash][ext][query]" },
       },
@@ -29,6 +34,7 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      { test: /\.css/i, use: [MiniCssExtractPlugin.loader, "css-loader"] },
       {
         test: /\.less$/,
         use: [
@@ -45,7 +51,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./src/index.html"),
+      template: path.resolve(".", "src/index.html"),
     }),
     new MiniCssExtractPlugin({ filename: "[name].[contenthash:8].css" }),
   ],
