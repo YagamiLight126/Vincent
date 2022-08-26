@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Editor } from "@tinymce/tinymce-react";
-console.log(TINYMCE_PUBLIC_PATH);
+
 export default function App() {
   const editorRef = useRef(null);
   const log = () => {

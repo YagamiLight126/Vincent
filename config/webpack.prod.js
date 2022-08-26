@@ -1,4 +1,6 @@
 const { merge } = require("webpack-merge");
+const webpack = require("webpack");
+const CopyPlugin = require("copy-webpack-plugin");
 const AntdDayjsWebpackPlugin = require("antd-dayjs-webpack-plugin");
 const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
@@ -15,7 +17,11 @@ module.exports = merge(common, {
   },
   devtool: false,
   plugins: [
+    new webpack.DefinePlugin({
+      TINYMCE_PUBLIC_PATH: JSON.stringify("./public"),
+    }),
     new AntdDayjsWebpackPlugin(),
+    new CopyPlugin({ patterns: [{ from: "public", to: "public" }] }),
     // new BundleAnalyzerPlugin()
   ],
 });
