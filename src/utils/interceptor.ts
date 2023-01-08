@@ -4,10 +4,7 @@ import { ResponseData } from "./api-request";
 antdMessage.config({ maxCount: 1 });
 
 // 处理请求错误
-export function handleRequestError(
-  result: ResponseData,
-  notifyType = "message"
-) {
+export function handleRequestError(result: ResponseData, notifyType = "message") {
   const { message } = result;
   if (notifyType === "notification") {
     notification.destroy();

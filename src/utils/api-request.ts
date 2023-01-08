@@ -167,7 +167,6 @@ class BaseAPIRequest {
         }
         return result;
       }
-
       return response.json().then((json) => {
         let result = json;
 

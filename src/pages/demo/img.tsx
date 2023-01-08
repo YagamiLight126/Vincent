@@ -1,10 +1,14 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx } from "@emotion/react";
+import { useRouteLoaderData } from "react-router-dom";
 
 import Lelouch from "../../../assets/lelouch.jpeg";
 
 export default function ImageDemo() {
+  const rootLoaderData = useRouteLoaderData("root");
+  console.info(rootLoaderData);
+
   return (
     <div css={{ width: "100%" }}>
       <img width="100%" src={Lelouch} />

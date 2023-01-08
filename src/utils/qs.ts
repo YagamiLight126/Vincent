@@ -10,13 +10,10 @@ function getParameterByName(name: string, byHash = false) {
  */
 function queryStringToMap() {
   const queryStringMap = new Map();
-  window.location.search.replace(
-    /[?&]+([^=&]+)=([^&#]*)/gi,
-    (m, key, value) => {
-      queryStringMap.set(key, value);
-      return m;
-    }
-  );
+  window.location.search.replace(/[?&]+([^=&]+)=([^&#]*)/gi, (m, key, value) => {
+    queryStringMap.set(key, value);
+    return m;
+  });
 
   return queryStringMap;
 }
@@ -27,9 +24,7 @@ function queryStringToMap() {
 function getSearchString(queryMap: Map<unknown, unknown>) {
   let searchString = "";
   queryMap.forEach((value, key) => {
-    searchString = searchString
-      ? `${searchString}&${key}=${value}`
-      : `${key}=${value}`;
+    searchString = searchString ? `${searchString}&${key}=${value}` : `${key}=${value}`;
   });
   return searchString;
 }
